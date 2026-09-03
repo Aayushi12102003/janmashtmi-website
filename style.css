@@ -1,0 +1,1798 @@
+/* =========================================================
+   RESET / GLOBAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+
+    font-family:
+        Georgia,
+        "Noto Serif",
+        serif;
+
+    color: white;
+
+    background:
+        linear-gradient(rgba(3, 8, 30, .58),
+            rgba(3, 8, 30, .75)),
+        url("krishna.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+img {
+    max-width: 100%;
+}
+
+button {
+    font-family: inherit;
+}
+
+main {
+    width: min(950px, 94%);
+    margin: auto;
+
+    padding:
+        80px 0 35px;
+}
+
+
+/* =========================================================
+   MUSIC
+========================================================= */
+
+.music-btn {
+
+    position: fixed;
+
+    top: 18px;
+    right: 18px;
+
+    z-index: 1000;
+
+    padding: 9px 17px;
+
+    border-radius: 30px;
+
+    border: 1px solid #e4c45c;
+
+    background:
+        rgba(5, 10, 30, .75);
+
+    color: #ffe18a;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    backdrop-filter: blur(8px);
+
+    -webkit-backdrop-filter: blur(8px);
+
+    transition: .3s;
+}
+
+.music-btn:hover {
+
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 18px rgba(255, 215, 80, .3);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    text-align: center;
+
+    padding:
+        25px 10px;
+}
+
+.mantra {
+
+    color: #e8c65d;
+
+    letter-spacing: 4px;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+
+    font-size:
+        clamp(45px, 8vw, 72px);
+
+    color: #ffd45b;
+
+    text-shadow:
+        0 0 20px rgba(255, 200, 50, .35);
+
+    margin-bottom: 5px;
+
+    word-wrap: break-word;
+}
+
+.hero h2 {
+
+    font-size: 23px;
+
+    font-weight: normal;
+
+    color: #fff0b9;
+
+    line-height: 1.4;
+}
+
+.decor-line {
+
+    color: #e8c65d;
+
+    margin: 15px 0;
+
+    letter-spacing: 4px;
+}
+
+.welcome {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #eee8d4;
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+
+/* =========================================================
+   PHOTO / CARD SECTION
+========================================================= */
+
+.photo-section {
+
+    margin-top: 25px;
+
+    text-align: center;
+}
+
+.photo-section h3 {
+
+    color: #ffd45b;
+
+    font-size: 29px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Cards */
+
+.photos {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    max-width: 780px;
+
+    margin: auto;
+}
+
+.photo {
+
+    width: 100%;
+
+    max-width: 240px;
+
+    margin: auto;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    background:
+        rgba(3, 8, 28, .55);
+
+    border:
+        1px solid rgba(232, 198, 93, .5);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, .4);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+    cursor: pointer;
+}
+
+.photo:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 12px 30px rgba(255, 210, 80, .2);
+}
+
+
+/*
+   IMPORTANT:
+   Card image crop nahi hogi.
+*/
+
+.photo img {
+
+    width: 100%;
+
+    height: 210px;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    display: block;
+
+    cursor: pointer;
+
+    background:
+        rgba(0, 0, 0, .15);
+
+    transition:
+        transform .35s ease;
+}
+
+.photo:hover img {
+
+    transform: scale(1.03);
+}
+
+.photo p {
+
+    padding: 9px;
+
+    color: #ffe18a;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   STORY BUTTON
+========================================================= */
+
+.story-button-area {
+
+    text-align: center;
+
+    margin: 38px 0;
+}
+
+.story-btn {
+
+    padding:
+        13px 25px;
+
+    border-radius: 30px;
+
+    border:
+        1px solid #e5c55b;
+
+    background:
+        rgba(8, 14, 42, .75);
+
+    color: #ffe18a;
+
+    font-family: inherit;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    max-width: 100%;
+}
+
+.story-btn:hover {
+
+    background:
+        rgba(214, 167, 49, .18);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 0 22px rgba(255, 215, 80, .2);
+}
+
+
+/* =========================================================
+   WISH
+========================================================= */
+
+.wish {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding:
+        28px 20px;
+
+    border-top:
+        1px solid rgba(232, 198, 93, .3);
+
+    border-bottom:
+        1px solid rgba(232, 198, 93, .3);
+}
+
+.wish h3 {
+
+    color: #ffd45b;
+
+    font-size:
+        clamp(25px, 5vw, 38px);
+
+    margin-bottom: 15px;
+}
+
+.wish p {
+
+    color: #e9e5d6;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.wish strong {
+
+    display: block;
+
+    margin-top: 15px;
+
+    color: #ffe08a;
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   DOWNLOAD
+========================================================= */
+
+.download-area {
+
+    text-align: center;
+
+    margin: 30px 0;
+}
+
+.download-btn {
+
+    padding:
+        13px 25px;
+
+    border-radius: 30px;
+
+    border:
+        1px solid #ffe080;
+
+    background:
+        linear-gradient(135deg,
+            #d7aa35,
+            #8b5c16);
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    max-width: 100%;
+}
+
+.download-btn:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 0 25px rgba(255, 210, 80, .3);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    text-align: center;
+
+    color: #aaa995;
+
+    font-size: 13px;
+
+    padding:
+        10px 15px 25px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   STORY MODAL
+========================================================= */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 5000;
+
+    background:
+        rgba(0, 0, 0, .82);
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    overflow: hidden;
+}
+
+
+/*
+   Story box
+*/
+
+.story-box {
+
+    width:
+        min(650px, 100%);
+
+    height:
+        min(88vh, 900px);
+
+    position: relative;
+
+    padding:
+        30px 25px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(145deg,
+            #0b1740,
+            #050a21);
+
+    border:
+        1px solid #daba54;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, .6);
+
+    overflow: hidden;
+
+    isolation: isolate;
+}
+
+
+/*
+   Story title
+*/
+
+.story-box h2 {
+
+    position: relative;
+
+    z-index: 5;
+
+    text-align: center;
+
+    color: #ffd45b;
+
+    margin-bottom: 22px;
+
+    line-height: 1.4;
+}
+
+
+/*
+   Scrollable story content
+*/
+
+.story-text {
+
+    position: relative;
+
+    z-index: 4;
+
+    height:
+        calc(100% - 55px);
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    text-align: center;
+
+    padding:
+        5px 12px 45px;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        #daba54 rgba(255, 255, 255, .08);
+}
+
+
+/* Chrome / Edge scrollbar */
+
+.story-text::-webkit-scrollbar {
+
+    width: 7px;
+}
+
+.story-text::-webkit-scrollbar-track {
+
+    background:
+        rgba(255, 255, 255, .05);
+
+    border-radius: 10px;
+}
+
+.story-text::-webkit-scrollbar-thumb {
+
+    background:
+        #daba54;
+
+    border-radius: 10px;
+}
+
+
+/* Story paragraphs */
+
+.story-text p {
+
+    color: #e8e5d7;
+
+    line-height: 2;
+
+    font-size: 17px;
+
+    margin-bottom: 20px;
+
+    position: relative;
+
+    z-index: 4;
+}
+
+.story-text .story-highlight {
+
+    color: #ffd45b;
+
+    font-size: 19px;
+}
+
+.story-text .jai {
+
+    color: #ffe18a;
+
+    font-size: 21px;
+}
+
+
+/* =========================================================
+   STORY IMAGES
+========================================================= */
+
+/*
+   IMPORTANT:
+   Story ki images crop nahi hongi.
+   Puri image visible rahegi.
+*/
+
+.story-image {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 360px;
+
+    height: auto;
+
+    max-height: 420px;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    margin:
+        25px auto 30px;
+
+    border-radius: 15px;
+
+    border:
+        1px solid #e5c55b;
+
+    background:
+        rgba(0, 0, 0, .18);
+
+    box-shadow:
+        0 0 15px rgba(255, 215, 90, .3);
+
+    cursor: pointer;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.story-image:hover {
+
+    transform:
+        scale(1.02);
+
+    box-shadow:
+        0 0 25px rgba(255, 215, 90, .45);
+}
+
+
+/* =========================================================
+   STORY FIREFLIES
+========================================================= */
+
+/*
+   Ye poore story-box ke andar rahenge.
+   Scroll karne par bhi story ke area mein
+   firefly effect visible rahega.
+*/
+
+.story-fireflies {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+.story-firefly {
+
+    position: absolute;
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+    background:
+        #fff4a3;
+
+    box-shadow:
+        0 0 5px #fff4a3,
+        0 0 12px #ffe66d,
+        0 0 25px rgba(255, 220, 80, .9);
+
+    animation:
+        storyGlow 2s ease-in-out infinite alternate,
+
+        storyFloat 5s ease-in-out infinite alternate;
+}
+
+@keyframes storyGlow {
+
+    0% {
+
+        opacity: .15;
+
+        transform:
+            scale(.6);
+    }
+
+    50% {
+
+        opacity: 1;
+    }
+
+    100% {
+
+        opacity: .3;
+
+        transform:
+            scale(1.5);
+    }
+}
+
+@keyframes storyFloat {
+
+    0% {
+
+        margin-left: -25px;
+
+        margin-top: 20px;
+    }
+
+    50% {
+
+        margin-left: 20px;
+
+        margin-top: -15px;
+    }
+
+    100% {
+
+        margin-left: -10px;
+
+        margin-top: 25px;
+    }
+}
+
+
+/* =========================================================
+   CLOSE STORY
+========================================================= */
+
+.close-btn {
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 8px;
+
+    z-index: 10;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    width: 45px;
+
+    height: 45px;
+
+    line-height: 40px;
+
+    border-radius: 50%;
+
+    transition: .3s;
+}
+
+.close-btn:hover {
+
+    color: #ffd45b;
+
+    background:
+        rgba(255, 255, 255, .08);
+
+    transform:
+        rotate(90deg);
+}
+
+
+/* =========================================================
+   PHOTO MODAL
+========================================================= */
+
+.photo-modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 6000;
+
+    background:
+        rgba(0, 0, 0, .9);
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    overflow: hidden;
+}
+
+
+/*
+   Card image popup
+*/
+
+.photo-modal img {
+
+    width: auto;
+
+    height: auto;
+
+    max-width: 92vw;
+
+    max-height: 88vh;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    border-radius: 12px;
+
+    border:
+        2px solid #e3c45d;
+
+    box-shadow:
+        0 0 40px rgba(255, 215, 80, .2);
+}
+
+
+/* Photo close */
+
+.photo-close {
+
+    position: absolute;
+
+    right: 25px;
+
+    top: 15px;
+
+    z-index: 5;
+
+    color: white;
+
+    background: transparent;
+
+    border: none;
+
+    font-size: 45px;
+
+    cursor: pointer;
+
+    width: 55px;
+    height: 55px;
+
+    line-height: 45px;
+
+    border-radius: 50%;
+
+    transition: .3s;
+}
+
+.photo-close:hover {
+
+    color: #ffd45b;
+
+    transform:
+        rotate(90deg);
+}
+
+
+/* =========================================================
+   FLOWERS
+========================================================= */
+
+.flower {
+
+    position: fixed;
+
+    top: -40px;
+
+    z-index: 4000;
+
+    pointer-events: none;
+
+    animation:
+        flowerFall linear forwards;
+}
+
+@keyframes flowerFall {
+
+    0% {
+
+        transform:
+            translateY(-50px) rotate(0);
+
+        opacity: 0;
+    }
+
+    15% {
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh) rotate(540deg);
+
+        opacity: .7;
+    }
+}
+
+
+/* =========================================================
+   FIREFLIES - MAIN PAGE
+========================================================= */
+
+.firefly {
+
+    position: fixed;
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+    background:
+        #ffe879;
+
+    box-shadow:
+        0 0 10px #ffe879;
+
+    z-index: 3;
+
+    pointer-events: none;
+
+    animation:
+        fireflyMove 5s ease-in-out infinite alternate;
+}
+
+@keyframes fireflyMove {
+
+    0% {
+
+        opacity: .1;
+
+        transform:
+            translate(0, 0);
+    }
+
+    50% {
+
+        opacity: 1;
+    }
+
+    100% {
+
+        opacity: .15;
+
+        transform:
+            translate(50px, -70px);
+    }
+}
+
+
+/* =========================================================
+   BALLOONS
+========================================================= */
+
+.balloon {
+
+    position: fixed;
+
+    bottom: -80px;
+
+    font-size: 35px;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    animation:
+        balloonMove 14s linear infinite;
+}
+
+.balloon1 {
+
+    left: 8%;
+
+    animation-delay: 1s;
+}
+
+.balloon2 {
+
+    right: 8%;
+
+    animation-delay: 7s;
+}
+
+@keyframes balloonMove {
+
+    0% {
+
+        bottom: -80px;
+
+        transform:
+            translateX(0);
+    }
+
+    50% {
+
+        transform:
+            translateX(35px);
+    }
+
+    100% {
+
+        bottom: 110%;
+
+        transform:
+            translateX(-30px);
+    }
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    main {
+
+        width: 94%;
+    }
+
+    .photos {
+
+        gap: 15px;
+    }
+
+    .photo {
+
+        max-width: 230px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 750px) {
+
+    main {
+
+        width: 94%;
+
+        padding-top: 75px;
+    }
+
+    .photos {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        max-width: 600px;
+
+        gap: 18px;
+    }
+
+    .photo {
+
+        max-width: 260px;
+    }
+
+    .photo img {
+
+        height: 240px;
+    }
+
+    .hero {
+
+        padding:
+            20px 5px;
+    }
+
+    .welcome {
+
+        font-size: 17px;
+    }
+
+    .story-box {
+
+        width: 94%;
+
+        height: 88vh;
+
+        padding:
+            28px 20px;
+    }
+
+    .story-text {
+
+        padding:
+            5px 8px 40px;
+    }
+
+    .story-image {
+
+        max-width: 330px;
+
+        max-height: 380px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    body {
+
+        background-attachment: scroll;
+    }
+
+    main {
+
+        width: 94%;
+
+        padding:
+            70px 0 25px;
+    }
+
+
+    /* Music */
+
+    .music-btn {
+
+        top: 10px;
+
+        right: 10px;
+
+        padding:
+            7px 12px;
+
+        font-size: 12px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+
+        padding:
+            18px 4px;
+    }
+
+    .mantra {
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 10px;
+    }
+
+    .hero h1 {
+
+        font-size:
+            clamp(34px, 11vw, 42px);
+
+        line-height: 1.2;
+    }
+
+    .hero h2 {
+
+        font-size: 19px;
+
+        line-height: 1.4;
+    }
+
+    .decor-line {
+
+        margin: 12px 0;
+
+        letter-spacing: 2px;
+    }
+
+    .welcome {
+
+        font-size: 15px;
+
+        line-height: 1.7;
+
+        padding:
+            0 5px;
+    }
+
+
+    /* Photo cards */
+
+    .photo-section {
+
+        margin-top: 20px;
+    }
+
+    .photo-section h3 {
+
+        font-size: 24px;
+
+        margin-bottom: 16px;
+    }
+
+    .photos {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 18px;
+
+        width: 100%;
+    }
+
+    .photo {
+
+        width: 90%;
+
+        max-width: 280px;
+    }
+
+    .photo img {
+
+        height: 250px;
+
+        object-fit: contain;
+    }
+
+    .photo p {
+
+        font-size: 13px;
+
+        padding: 8px;
+    }
+
+
+    /* Story button */
+
+    .story-button-area {
+
+        margin:
+            30px 0;
+    }
+
+    .story-btn {
+
+        width: auto;
+
+        max-width: 95%;
+
+        padding:
+            11px 18px;
+
+        font-size: 15px;
+    }
+
+
+    /* Wish */
+
+    .wish {
+
+        padding:
+            22px 12px;
+    }
+
+    .wish h3 {
+
+        font-size: 27px;
+
+        line-height: 1.3;
+    }
+
+    .wish p {
+
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+    .wish strong {
+
+        font-size: 18px;
+    }
+
+
+    /* Download */
+
+    .download-area {
+
+        margin:
+            25px 0;
+    }
+
+    .download-btn {
+
+        max-width: 95%;
+
+        padding:
+            11px 17px;
+
+        font-size: 14px;
+    }
+
+
+    /* Story modal */
+
+    .modal {
+
+        padding: 10px;
+    }
+
+    .story-box {
+
+        width: 96%;
+
+        height: 92vh;
+
+        max-height: 92vh;
+
+        padding:
+            30px 12px 15px;
+
+        border-radius: 18px;
+    }
+
+    .story-box h2 {
+
+        font-size: 22px;
+
+        padding:
+            0 30px 0 10px;
+
+        margin-bottom: 15px;
+    }
+
+    .story-text {
+
+        height:
+            calc(100% - 45px);
+
+        padding:
+            5px 7px 35px;
+    }
+
+    .story-text p {
+
+        font-size: 14px;
+
+        line-height: 1.8;
+
+        margin-bottom: 17px;
+    }
+
+    .story-text .story-highlight {
+
+        font-size: 16px;
+    }
+
+    .story-text .jai {
+
+        font-size: 18px;
+    }
+
+
+    /* Story images */
+
+    .story-image {
+
+        width: 94%;
+
+        max-width: 290px;
+
+        height: auto;
+
+        max-height: 360px;
+
+        object-fit: contain;
+
+        margin:
+            18px auto 25px;
+    }
+
+
+    /* Story close */
+
+    .close-btn {
+
+        right: 5px;
+
+        top: 4px;
+
+        font-size: 30px;
+
+        width: 40px;
+
+        height: 40px;
+
+        line-height: 35px;
+    }
+
+
+    /* Photo popup */
+
+    .photo-modal {
+
+        padding: 10px;
+    }
+
+    .photo-modal img {
+
+        max-width: 94vw;
+
+        max-height: 82vh;
+
+        border-radius: 10px;
+    }
+
+    .photo-close {
+
+        right: 8px;
+
+        top: 5px;
+
+        font-size: 38px;
+
+        width: 45px;
+
+        height: 45px;
+    }
+
+
+    /* Fireflies */
+
+    .firefly {
+
+        width: 4px;
+
+        height: 4px;
+    }
+
+    .story-firefly {
+
+        width: 4px;
+
+        height: 4px;
+    }
+
+
+    /* Balloons */
+
+    .balloon {
+
+        font-size: 28px;
+    }
+
+    .balloon1 {
+
+        left: 3%;
+    }
+
+    .balloon2 {
+
+        right: 3%;
+    }
+
+
+    footer {
+
+        font-size: 12px;
+
+        padding:
+            8px 12px 20px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   320px - 360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+    main {
+
+        width: 95%;
+
+        padding-top: 65px;
+    }
+
+    .music-btn {
+
+        font-size: 10px;
+
+        padding:
+            6px 9px;
+    }
+
+    .mantra {
+
+        font-size: 9px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .hero h1 {
+
+        font-size: 32px;
+    }
+
+    .hero h2 {
+
+        font-size: 17px;
+    }
+
+    .welcome {
+
+        font-size: 13px;
+    }
+
+    .photo {
+
+        width: 94%;
+    }
+
+    .photo img {
+
+        height: 220px;
+    }
+
+    .story-btn {
+
+        font-size: 13px;
+
+        padding:
+            10px 15px;
+    }
+
+    .wish h3 {
+
+        font-size: 24px;
+    }
+
+    .download-btn {
+
+        font-size: 12px;
+
+        padding:
+            10px 14px;
+    }
+
+    .story-box {
+
+        width: 98%;
+
+        height: 94vh;
+
+        padding:
+            27px 8px 10px;
+    }
+
+    .story-box h2 {
+
+        font-size: 19px;
+    }
+
+    .story-text {
+
+        padding:
+            4px 5px 30px;
+    }
+
+    .story-text p {
+
+        font-size: 13px;
+
+        line-height: 1.75;
+    }
+
+    .story-image {
+
+        width: 96%;
+
+        max-width: 250px;
+
+        max-height: 300px;
+
+        margin:
+            15px auto 22px;
+    }
+
+    .story-text .story-highlight {
+
+        font-size: 15px;
+    }
+
+    .story-text .jai {
+
+        font-size: 16px;
+    }
+
+    .photo-modal img {
+
+        max-width: 96vw;
+
+        max-height: 78vh;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+   280px - 320px
+========================================================= */
+
+@media (max-width: 320px) {
+
+    .hero h1 {
+
+        font-size: 28px;
+    }
+
+    .hero h2 {
+
+        font-size: 15px;
+    }
+
+    .photo img {
+
+        height: 200px;
+    }
+
+    .story-box {
+
+        border-radius: 14px;
+    }
+
+    .story-text p {
+
+        font-size: 12px;
+    }
+
+    .story-image {
+
+        max-width: 220px;
+
+        max-height: 270px;
+    }
+
+    .download-btn {
+
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+    .modal {
+
+        padding: 8px;
+    }
+
+    .story-box {
+
+        height: 94vh;
+
+        padding:
+            20px 18px;
+    }
+
+    .story-text {
+
+        height:
+            calc(100% - 40px);
+    }
+
+    .story-image {
+
+        max-height: 250px;
+    }
+
+    .photo-modal img {
+
+        max-height: 88vh;
+    }
+}
+
+
+/* =========================================================
+   REDUCE ANIMATION FOR DEVICES THAT REQUEST IT
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+    }
+}
